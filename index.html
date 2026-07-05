@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sathish Kumar &amp; Pavithra — A Cinematic Love Story</title>
+  <meta name="description" content="Celebrating the beautiful union of Sathish Kumar and Pavithra. A cinematic luxury wedding experience — 7 June 2026." />
+  <meta name="theme-color" content="#080604" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ════════════════════ PARTICLE CANVAS (background) ═══════════ -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ════════════════════ 1. CINEMATIC LOADER ════════════════════ -->
+  <div id="cinematic-loader">
+    <div class="loader-particles" id="loaderParticles"></div>
+    <div class="loader-monogram">S <span class="heart">♥</span> P</div>
+    <div class="loader-progress-wrap">
+      <div class="loader-progress-bar" id="loaderBar"></div>
+    </div>
+    <div class="loader-percentage" id="loaderPercent">0%</div>
+  </div>
+
+  <!-- ════════════════════ 2. ENVELOPE INVITATION ════════════════ -->
+  <div id="envelope-screen">
+    <div class="envelope-container">
+      <div class="envelope" id="envelope">
+        <div class="envelope-back"></div>
+        <div class="invitation-card">
+          <div class="invite-ornament">✦ ✦ ✦</div>
+          <div class="invite-names">
+            Sathish Kumar
+            <span class="amp">&amp;</span>
+            Pavithra
+          </div>
+          <p class="invite-subtitle">Invite You To Celebrate Their Wedding</p>
+          <div class="invite-divider"></div>
+          <div class="invite-date">7 &middot; JUNE &middot; 2026</div>
+          <button class="btn-enter" id="enterBtn">
+            <span>Enter Our Wedding Story</span>
+          </button>
+        </div>
+        <div class="envelope-front"></div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-seal" id="envelopeSeal">S&amp;P</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ 3. MAIN WEBSITE ═══════════════════════ -->
+  <div id="main-site">
+
+    <!-- ══════════ NAVBAR ══════════ -->
+    <nav id="navbar">
+      <div class="nav-logo">S <span class="heart">♥</span> P</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#our-story">Story</a></li>
+        <li><a href="#engagement">Engagement</a></li>
+        <li><a href="#poojai">Poojai</a></li>
+        <li><a href="#wedding">Wedding</a></li>
+        <li><a href="#reception">Reception</a></li>
+        <li><a href="#events">Events</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="theme-toggle" id="themeToggle" title="Toggle theme">
+          <div class="theme-toggle-knob"></div>
+        </div>
+        <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ══════════ MOBILE NAV ══════════ -->
+    <div class="mobile-nav" id="mobileNav">
+      <button class="mobile-nav-close" id="mobileNavClose">&times;</button>
+      <div class="mobile-nav-monogram">S <span class="heart">♥</span> P</div>
+      <ul>
+        <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#our-story" class="mobile-nav-link">Our Story</a></li>
+        <li><a href="#engagement" class="mobile-nav-link">Engagement</a></li>
+        <li><a href="#poojai" class="mobile-nav-link">Poojai</a></li>
+        <li><a href="#wedding" class="mobile-nav-link">Wedding</a></li>
+        <li><a href="#reception" class="mobile-nav-link">Reception</a></li>
+        <li><a href="#events" class="mobile-nav-link">Events</a></li>
+      </ul>
+    </div>
+
+    <!-- ══════════ HERO ══════════ -->
+    <section id="hero">
+      <div class="hero-slider" id="heroSlider"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-vignette"></div>
+      <div class="hero-content">
+        <p class="hero-overline reveal-up">A Cinematic Love Story</p>
+        <h1 class="hero-names reveal-up delay-1">
+          Sathish Kumar
+          <span class="amp">&amp;</span>
+          Pavithra
+        </h1>
+        <p class="hero-tagline reveal-up delay-2">Forever Begins Here</p>
+        <p class="hero-date reveal-up delay-3">7 &middot; JUNE &middot; 2026</p>
+        <div class="hero-divider reveal-up delay-4">
+          <span class="line"></span>
+          <span class="icon">✦</span>
+          <span class="line"></span>
+        </div>
+        <a href="#engagement" class="btn-explore reveal-up delay-5">
+          <span>Explore Memories</span>
+        </a>
+      </div>
+      <div class="hero-dots" id="heroDots"></div>
+      <div class="petals" id="petals"></div>
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ══════════ OUR STORY ══════════ -->
+    <section id="our-story" class="section-pad">
+      <div class="section-header">
+        <p class="section-label reveal-up">Our Journey</p>
+        <h2 class="section-title reveal-up delay-1">A Love Story</h2>
+        <div class="gold-line reveal-up delay-2"></div>
+        <p class="section-subtitle reveal-up delay-3">From a destined first glance to a forever promise — every chapter of our love is a story worth telling.</p>
+      </div>
+      <div class="story-timeline">
+        <div class="story-item reveal-left">
+          <div class="story-dot">💫</div>
+          <div class="story-card">
+            <span class="story-year">The Beginning</span>
+            <h3>How We Met</h3>
+            <p>Two souls crossed paths at the most unexpected moment — and the universe whispered, "This is it." A single glance changed everything forever.</p>
+          </div>
+        </div>
+        <div class="story-item right reveal-right">
+          <div class="story-dot">💬</div>
+          <div class="story-card">
+            <span class="story-year">The Spark</span>
+            <h3>First Conversation</h3>
+            <p>Hours felt like minutes when we talked. Every word wove an invisible thread binding our hearts closer, sealing a connection beyond time.</p>
+          </div>
+        </div>
+        <div class="story-item reveal-left">
+          <div class="story-dot">💍</div>
+          <div class="story-card">
+            <span class="story-year">She Said Yes</span>
+            <h3>Engagement</h3>
+            <p>Surrounded by family and blessings, rings were exchanged and hearts were forever intertwined. A promise sealed with love and joy.</p>
+          </div>
+        </div>
+        <div class="story-item right reveal-right">
+          <div class="story-dot">🕊️</div>
+          <div class="story-card">
+            <span class="story-year">Sacred Union</span>
+            <h3>Wedding</h3>
+            <p>Under sacred fire and divine blessings, two became one. Vows spoken from the heart, tears of joy, and a love story sealed for eternity.</p>
+          </div>
+        </div>
+        <div class="story-item reveal-left">
+          <div class="story-dot">✨</div>
+          <div class="story-card">
+            <span class="story-year">Grand Celebration</span>
+            <h3>Reception</h3>
+            <p>An enchanting evening of music, laughter, and glamour — the perfect finale where love was felt in every corner of the room.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ ENGAGEMENT GALLERY ══════════ -->
+    <section id="engagement" class="section-pad section-alt">
+      <div class="section-header">
+        <p class="section-label reveal-up">Chapter I</p>
+        <h2 class="section-title reveal-up delay-1">Engagement</h2>
+        <div class="gold-line reveal-up delay-2"></div>
+        <p class="section-subtitle reveal-up delay-3">The first step towards forever — rings exchanged, hearts intertwined, and a love celebrated by all.</p>
+      </div>
+      <div class="masonry-grid" id="engagementGallery"></div>
+      <div class="gallery-view-more reveal-up">
+        <button class="btn-gold" onclick="openLightboxGallery('engagement')">View All Photos</button>
+      </div>
+    </section>
+
+    <!-- ══════════ QUOTE 1 ══════════ -->
+    <div class="quote-section">
+      <div class="quote-ornament reveal-up">✦</div>
+      <p class="quote-text reveal-up delay-1">&ldquo;Every love story is beautiful, but ours is my favorite.&rdquo;</p>
+    </div>
+
+    <!-- ══════════ POOJAI GALLERY ══════════ -->
+    <section id="poojai" class="section-pad">
+      <div class="section-header">
+        <p class="section-label reveal-up">Chapter II</p>
+        <h2 class="section-title reveal-up delay-1">Poojai Ceremony</h2>
+        <div class="gold-line reveal-up delay-2"></div>
+        <p class="section-subtitle reveal-up delay-3">Sacred blessings, divine rituals, and the beautiful traditions that honour our roots and culture.</p>
+      </div>
+      <div class="masonry-grid" id="poojaiGallery"></div>
+      <div class="gallery-view-more reveal-up">
+        <button class="btn-gold" onclick="openLightboxGallery('poojai')">View All Photos</button>
+      </div>
+    </section>
+
+    <!-- ══════════ QUOTE 2 ══════════ -->
+    <div class="quote-section section-alt">
+      <div class="quote-ornament reveal-up">✦</div>
+      <p class="quote-text reveal-up delay-1">&ldquo;You are my today and all of my tomorrows.&rdquo;</p>
+    </div>
+
+    <!-- ══════════ WEDDING GALLERY ══════════ -->
+    <section id="wedding" class="section-pad">
+      <div class="section-header">
+        <p class="section-label reveal-up">Chapter III</p>
+        <h2 class="section-title reveal-up delay-1">The Wedding</h2>
+        <div class="gold-line reveal-up delay-2"></div>
+        <p class="section-subtitle reveal-up delay-3">The most magical day — vows exchanged, tears of joy, and a love story sealed for eternity.</p>
+      </div>
+      <div class="masonry-grid" id="weddingGallery"></div>
+      <div class="gallery-view-more reveal-up">
+        <button class="btn-gold" onclick="openLightboxGallery('wedding')">View All Photos</button>
+      </div>
+    </section>
+
+    <!-- ══════════ QUOTE 3 ══════════ -->
+    <div class="quote-section">
+      <div class="quote-ornament reveal-up">✦</div>
+      <p class="quote-text reveal-up delay-1">&ldquo;In all the world, there is no heart for me like yours.&rdquo;</p>
+    </div>
+
+    <!-- ══════════ RECEPTION GALLERY ══════════ -->
+    <section id="reception" class="section-pad section-alt">
+      <div class="section-header">
+        <p class="section-label reveal-up">Chapter IV</p>
+        <h2 class="section-title reveal-up delay-1">Reception</h2>
+        <div class="gold-line reveal-up delay-2"></div>
+        <p class="section-subtitle reveal-up delay-3">An evening of glamour, laughter, and celebrations — where love was felt in every corner of the room.</p>
+      </div>
+      <div class="masonry-grid" id="receptionGallery"></div>
+      <div class="gallery-view-more reveal-up">
+        <button class="btn-gold" onclick="openLightboxGallery('reception')">View All Photos</button>
+      </div>
+    </section>
+
+    <!-- ══════════ EVENT TIMELINE ══════════ -->
+    <section id="events" class="section-pad">
+      <div class="section-header">
+        <p class="section-label reveal-up">Milestones</p>
+        <h2 class="section-title reveal-up delay-1">Event Timeline</h2>
+        <div class="gold-line reveal-up delay-2"></div>
+      </div>
+      <div class="event-timeline">
+        <div class="event-item reveal-up">
+          <div class="event-icon">💍</div>
+          <div class="event-label">Engagement</div>
+          <div class="event-date-text">A promise of forever</div>
+        </div>
+        <div class="event-item reveal-up delay-1">
+          <div class="event-icon">🪔</div>
+          <div class="event-label">Poojai</div>
+          <div class="event-date-text">Sacred blessings</div>
+        </div>
+        <div class="event-item reveal-up delay-2">
+          <div class="event-icon">❤️</div>
+          <div class="event-label">Wedding</div>
+          <div class="event-date-text">Two become one</div>
+        </div>
+        <div class="event-item reveal-up delay-3">
+          <div class="event-icon">✨</div>
+          <div class="event-label">Reception</div>
+          <div class="event-date-text">A grand celebration</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ ENDING ══════════ -->
+    <section id="ending" class="section-ending">
+      <div class="ending-bg" id="endingBg"></div>
+      <div class="ending-overlay"></div>
+      <div class="ending-content">
+        <p class="ending-label reveal-up">With Gratitude</p>
+        <h2 class="ending-title reveal-up delay-1">Thank You</h2>
+        <p class="ending-subtitle reveal-up delay-2">For Being Part Of Our Beautiful Journey</p>
+        <div class="gold-line reveal-up delay-3"></div>
+        <div class="ending-monogram reveal-up delay-4">S <span class="heart">❤️</span> P</div>
+        <p class="ending-couple reveal-up delay-5">Sathish Kumar &amp; Pavithra</p>
+        <div class="ending-hearts reveal-up delay-6">
+          <span>♡</span><span>♡</span><span>♡</span>
+        </div>
+        <p class="ending-forever reveal-up delay-7">Forever Begins Here &middot; 2026</p>
+      </div>
+    </section>
+
+    <!-- ══════════ FOOTER ══════════ -->
+    <footer class="site-footer">
+      <p>Crafted with <span class="heart">♥</span> &nbsp;|&nbsp; Sathish Kumar &amp; Pavithra &middot; 2026</p>
+    </footer>
+
+  </div><!-- /main-site -->
+
+  <!-- ══════════ LIGHTBOX ══════════ -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-label="Image viewer" aria-modal="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">&#8249;</button>
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next">&#8250;</button>
+    <div class="lightbox-img-wrap">
+      <img id="lightboxImg" src="" alt="Wedding photo" />
+      <div class="lightbox-loader"></div>
+    </div>
+    <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+    <div class="lightbox-thumbs" id="lightboxThumbs"></div>
+  </div>
+
+  <!-- ══════════ MUSIC PLAYER ══════════ -->
+  <div class="music-player" id="musicPlayer">
+    <button class="music-play-btn" id="musicPlayBtn" title="Play/Pause">▶</button>
+    <div class="music-info">
+      <div class="music-title">Wedding Melody</div>
+      <div class="music-status" id="musicStatus">Paused</div>
+    </div>
+    <input type="range" class="music-volume" id="musicVolume" min="0" max="100" value="30" title="Volume" />
+  </div>
+
+  <!-- ══════════ BACK TO TOP ══════════ -->
+  <button class="back-to-top" id="backToTop" title="Back to top">
+    <div class="btt-bg"></div>
+    <svg class="btt-circle" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" id="bttCircle"/></svg>
+    <span class="btt-arrow">↑</span>
+  </button>
+
+  <!-- ══════════ AUDIO ══════════ -->
+  <audio id="bgMusic" loop preload="none">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
